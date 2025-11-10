@@ -1,0 +1,18 @@
+<!-- src/app/pages/login/login.component.html -->
+<div class="card">
+  <h2>Inicio de Sesión</h2>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <label>
+      Correo:
+      <input type="email" formControlName="email" />
+    </label>
+
+    <label>
+      Contraseña:
+      <input type="password" formControlName="password" />
+    </label>
+
+    <button type="submit" [disabled]="loginForm.invalid">Iniciar Sesión</button>
+  </form>
+</div>
